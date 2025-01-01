@@ -5,7 +5,7 @@ import React from 'react'
 
 
 
-function Card({player}) {
+function Card({player, onPlay, index}) {
     let icon = <Icon />
     if(player=='X'){
         icon=<Icon name="cross"/>
@@ -14,7 +14,7 @@ function Card({player}) {
     }
     
     return (
-            <div className="card">
+            <div className="card" onClick={() => onPlay(index)}>
                 {icon}
             </div>
         )
